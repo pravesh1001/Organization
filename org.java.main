@@ -1,0 +1,44 @@
+package com.java.org;
+
+import java.util.Scanner;
+
+import com.java.org.model.Manager;
+import com.java.org.service.EmployeeDTO;
+
+public class main extends EmployeeDTO {
+
+	public main(int id, String name, int yearsofexperience, Manager manager) {
+		super(id, name, yearsofexperience, manager);
+		// TODO Auto-generated constructor stub
+	}
+	public static void main(String[] args) {
+		EmployeeDTO ed=new EmployeeDTO(id, name, yearsofexperience, manager);
+		System.out.println("Employee DataBase \n");
+		System.out.println("1 : For employee list");
+		System.out.println("2 : Sorted List Based on years of experiance");
+		System.out.println("3 : Employee having more than 5 years of experiance");
+		System.out.println("4 : Enter id of employeenumber for get manager name");
+		System.out.println("5 : Search Employees By id number");
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter");
+		int choice=sc.nextInt();
+		switch(choice) {
+		 case 1:
+		ed.display();
+		break;
+		 case 2:
+			 ed.sorted();
+			 break;
+		 case 3:
+			 ed.experiance();
+			 break;
+		 case 4:
+			 ed.getidinfo();
+			 break;
+		 case 5:
+			 ed.searchbyid();
+			 
+	}
+}
+}
